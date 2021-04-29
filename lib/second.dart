@@ -7,6 +7,18 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('SecondPage'),
       ),
+      body: Center(
+        child: Column(
+          children: [
+            RaisedButton(
+              child: Text('back'),
+              onPressed: () {
+                Navigator.pop(context, 'ok');
+              },
+            )
+          ],
+        ),
+      ),
     );
   }
 }

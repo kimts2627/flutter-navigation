@@ -33,20 +33,23 @@ class HomePage extends StatelessWidget {
           children: [
             RaisedButton(
               child: Text('FirstPage'),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => FirstPage())
+              onPressed: () async {
+                final name = 'flutter';
+
+                final res = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FirstPage(name: 'flutter'))
                 );
               },
             ),
             RaisedButton(
               child: Text('SecondPage'),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SecondPage())
+              onPressed: () async {
+                final res = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondPage())
                 );
+                print(res);
               },
             ),
           ],

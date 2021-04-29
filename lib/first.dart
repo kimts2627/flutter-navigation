@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
+  final String name;
+  FirstPage({@required this.name});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +18,8 @@ class FirstPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-            )
+            ),
+            Text(name)
           ],
         ),
       ),
